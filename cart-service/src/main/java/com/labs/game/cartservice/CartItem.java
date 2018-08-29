@@ -1,14 +1,17 @@
 package com.labs.game.cartservice;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
+
 @Entity(name = "cartitems")
 public class CartItem {
     @Id
@@ -20,7 +23,7 @@ public class CartItem {
     @Column
     private int quantity;
     
-    public CartItem() {
+/*    public CartItem() {
     	
     }
     public CartItem(int id, String customer, String product, int quantity) {
@@ -29,7 +32,6 @@ public class CartItem {
     	this.product = product;
     	this.quantity = quantity;
     }
-
 	public Integer getId() {
 		return id;
 	}
@@ -61,5 +63,5 @@ public class CartItem {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+*/
 }

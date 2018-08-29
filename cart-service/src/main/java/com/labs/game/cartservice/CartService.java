@@ -2,23 +2,24 @@ package com.labs.game.cartservice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
+@RequiredArgsConstructor
+@AllArgsConstructor
+
 public class CartService {
 
     @Autowired
     private CartRepository repository;
     
-    public CartService(CartRepository repository) {
+/*    public CartService(CartRepository repository) {
     	this.repository = repository;
     }
-
+*/
     public CartItem[] findByCustomer(String customer) {
         final CartItem[] cartItems = repository.findByCustomer(customer);
         if (cartItems == null)
