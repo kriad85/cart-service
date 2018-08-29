@@ -16,10 +16,6 @@ public class CartService {
     @Autowired
     private CartRepository repository;
     
-/*    public CartService(CartRepository repository) {
-    	this.repository = repository;
-    }
-*/
     public CartItem[] findByCustomer(String customer) {
         final CartItem[] cartItems = repository.findByCustomer(customer);
         if (cartItems == null)
